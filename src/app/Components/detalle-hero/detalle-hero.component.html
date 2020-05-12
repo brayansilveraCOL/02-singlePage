@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+    <hr>
+    <h1 class="text-center ">{{hero.nombre}} <small>{{hero.aparicion | date:'y'}}</small></h1>
+    <hr>
+    <img  *ngIf="hero.casa=='Marvel'" src="assets/img/marvel.png" alt="" width="150">
+    <img  *ngIf="hero.casa=='DC'" src="assets/img/dc.jpg" alt="" width="100">
+  </div>
+
+  <div class="flex-row">
+
+    <div class="col-sm text-center">
+      <img [src]="hero.img" alt=""width="250" class="bg-dark shadow bg-white titulo">
+    </div>
+    <div class="col-sm text-center p-5 ">
+      <p class="text-justify">{{hero.bio}}</p>
+    </div>
+
+
+  </div>
+  <div class="col-sm text-center boton  ">
+    <a [routerLink]="['/']" class="btn btn-primary btn-lg btn-block">Regresar</a>
+  </div>
+</div>
